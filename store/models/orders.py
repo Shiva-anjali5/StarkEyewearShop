@@ -5,6 +5,7 @@ import datetime
 
 
 class Order(models.Model):
+    id = models.BigAutoField(primary_key=True)
     product = models.ForeignKey(Products,
                                 on_delete=models.CASCADE)
     customer = models.ForeignKey(Customer,
